@@ -1,4 +1,4 @@
-package com.laurasando.marcador_juegos
+package com.laurasando.marcador_juegos.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

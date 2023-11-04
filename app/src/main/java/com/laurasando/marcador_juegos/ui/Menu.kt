@@ -1,4 +1,4 @@
-package com.laurasando.marcador_juegos
+package com.laurasando.marcador_juegos.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +18,7 @@ class Menu : AppCompatActivity() {
         initUI()
 
         binding.iniciarMarcador.setOnClickListener {
-            val intent=Intent(this,Marcador::class.java)
+            val intent=Intent(this, Marcador::class.java)
             startActivity(intent)
         }
 
