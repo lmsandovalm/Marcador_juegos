@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Marcador</string>
+    <string name="txt_contrase_a">Contraseña</string>
+    <string name="txt_nombre_de_usuario">Nombre de usuario</string>
+    <string name="hint_usuario">Usuario</string>
+    <string name="hint_contrase_a">Contraseña</string>
+    <string name="btn_ingresar">Ingresar</string>
+    <string name="btn_iniciar_marcador">Iniciar Marcador 🏁</string>
+    <string name="btn_historial_marcadores">Historial Marcadores 🔍</string>
+    <string name="btn_nuevo_marcador">Nuevo Marcador</string>
+    <string name="btn_marcador_en_cero">Marcador en cero</string>
+    <string name="set">set</string>
+    <string name="restar">Restar</string>
+    <string name="_0">0</string>
+</resources>
