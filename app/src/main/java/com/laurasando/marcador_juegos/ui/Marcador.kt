@@ -12,5 +12,28 @@ class Marcador : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityMarcadorBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
+
+        initIU()
     }
+
+    private fun initIU() {
+        funSet()
+        funLocal()
+        funVis()
+    }
+
+    private fun funVis() {
+        binding.btnMarcadorVisitante.setOnClickListener {
+
+        }
+    }
+
+    private fun funLocal() {
+
+    }
+
+    private fun funSet() {
+
+    }
+
 }

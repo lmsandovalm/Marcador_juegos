@@ -77,5 +77,20 @@
         app:srcCompat="@drawable/balonvolei"
         />
 
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/botones"
+        android:fontFamily="@font/sansita"
+        android:text="@string/salir"
+        android:textSize="@dimen/_20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_historial"
+        app:layout_constraintVertical_bias="0.441" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

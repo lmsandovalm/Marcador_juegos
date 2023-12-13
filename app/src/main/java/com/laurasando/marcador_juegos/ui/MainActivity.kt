@@ -5,15 +5,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Toast
-import com.laurasando.marcador_juegos.data.SharePreferencesManager
+import com.laurasando.marcador_juegos.ListUsersActivity
+import com.laurasando.marcador_juegos.data.prefs.SharePreferencesManager
 import com.laurasando.marcador_juegos.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
     private lateinit var sharedPref: SharePreferencesManager
-    private var nomUsuario= ""
 
+    private var nomUsuario= ""
+    private var contrasena= ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,9 +23,6 @@ class MainActivity : AppCompatActivity() {
         sharedPref= SharePreferencesManager(this)
 
         setContentView(binding.root)
-
-        val usernamePref = sharedPref.getUserName()
-        Toast.makeText(this, usernamePref, Toast.LENGTH_SHORT).show()
 
         initIU()
         }
@@ -35,16 +34,27 @@ class MainActivity : AppCompatActivity() {
     private fun setupListener() {
         binding.ingresar.setOnClickListener {
             nomUsuario = binding.etUsuario.text.toString()
+            contrasena = binding.etContrasena.text.toString()
 
             if (validateForm()) {
                 val intent = Intent(this, Menu::class.java)
                 intent.putExtra("nombreUs", nomUsuario)
 
-                sharedPref.saveUserName(nomUsuario)
+                sharedPref.savePref("userNameKey", nomUsuario)
+                sharedPref.savePref("userPasswordKey", contrasena)
+                sharedPref.savePref("userIsLogged", true)
 
                 startActivity(intent)
+                loginAuth()
             }
         }
+    }
+
+    private fun loginAuth() {
+        sharedPref.savePref("userIsLogged", true)
+        val intent = Intent(this,ListUsersActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
 

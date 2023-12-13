@@ -13,30 +13,39 @@
         android:theme="@style/Theme.Marcador_juegos"
         tools:targetApi="31">
         <activity
+            android:name=".ItemUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListUsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.game.GameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.game.TeamPlanningActivity"
+            android:exported="false" />
+        <activity
             android:name=".splash"
-            android:exported="true"
-            >
+            android:exported="true">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".ui.Historial_marcador"
             android:exported="false" />
         <activity
-            android:screenOrientation="landscape"
             android:name=".ui.Marcador"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ui.Menu"
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
